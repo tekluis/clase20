@@ -8,6 +8,7 @@ router.get('/', function(req, res, next) {
 });
 
 
+
 router.get('/detalle/:id', function(req, res, next) {
   switch(req.params.id) {
     case '1': 
@@ -22,6 +23,9 @@ router.get('/detalle/:id', function(req, res, next) {
     case '4': 
       res.render(path.join(__dirname,'/../views/Esparragos.ejs'));
       break;
+    default: 
+    res.render(path.join(__dirname,'/../views/index.ejs'));
+    break;
   }
 });
 
